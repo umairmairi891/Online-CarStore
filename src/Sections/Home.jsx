@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
-
 function Home() {
   useEffect(() => {
     AOS.init({
@@ -13,14 +12,15 @@ function Home() {
   }, [])
   const feature = [
     {
-      img: "/src/assets/pexels-mikebirdy-93652.jpg",
+      img: '/pexels-mikebirdy-93652.jpg',
       title: 'MikeBirdy'
     },
     {
-      img: '/src/assets/bugatti-w16-mistral-3840x2160-25227.jpg',
+      img: '/bugatti-w16-mistral-3840x2160-25227.jpg',
       title: 'Bugatti'
-    }, {
-      img: '/src/assets/lamborghini-aventador-black-cars-cgi-3840x2160-3458.jpg',
+    },
+     {
+      img: '/lamborghini-aventador-black-cars-cgi-3840x2160-3458.jpg',
       title: 'Lamborghini Aventador'
     }
   ]
@@ -28,7 +28,7 @@ function Home() {
     <div className="">
       <section className='relative h-65 md:h-90  w-full  '>
         <div className="absolute inset-0 z-0">
-          <img src="/src/assets/pexels-milan-masnikosa-3898301-5802053.jpg" alt="" className='w-full h-full object-cover opacity-50 ' />
+          <img src="/pexels-milan-masnikosa-3898301-5802053.jpg" alt='Hero Image' className='w-full h-full object-cover opacity-50 ' />
         </div>
         <h3 className='text-white relative font-[Itel] top-15 md:top-20 leading-10 left-15 md:left-40 max-w-2 text-start text-xl md:text-2xl font-bold'>EXPERIENCE AUTOMATIVE EXCELLENCE</h3>
         <button className='bg-white relative cursor-pointer top-18 md:top-25 left-15 md:left-40 flex justify-around px-1 md:px-4 py-2 rounded font-bold font-serif hover:bg-black hover:text-white hover:duration-200'>Shop Now <span className='ml-1 md:ml-4'><ArrowRight className='w-6 h-6' /></span></button>
@@ -39,7 +39,7 @@ function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-5 mb-10 gap-1 md:gap-8">
             {feature.map((val) => (
               <div key={val.title}  className="py-1 md:py-6 scale-100 hover:scale-110 hover:duration-400">
-                <img loading='lazy' src={val.img} alt="" className='rounded w-90' />
+                <img loading='lazy' src={val.img} alt={val.title} className='rounded w-90' />
                 <h2 className='font-bold text-lg mt-3 font-[Roboto] px-5'>{val.title}</h2>
               </div>
             ))}
@@ -51,7 +51,7 @@ function Home() {
         <div className="p-5 px-5 md:px-30">
           <div className="flex flex-col-reverse md:flex-row justify-center gap-10 ">
             <div className="">
-              <img src='/src/assets/bugatti-w16-mistral-3840x2160-25227.jpg' alt="" className='w-full h-100 opacity-70' />
+              <img src='/bugatti-w16-mistral-3840x2160-25227.jpg' alt="" className='w-full h-100 opacity-70' />
             </div>
             <div className="">
               <h2 className='text-3xl font-black font-serif py-3 border-b-2'>Our Approach</h2>
@@ -67,7 +67,7 @@ function Home() {
             <h3 className='text-3xl py-5  font-serif font-bold'>VISIT US</h3>
           </div>
           <div className="">
-            <img src="/src/assets/ITAB_Bednarek_Polen_Retail_Lighting (2).jpg" className='w-full h-[60vh] object-cover' alt="" />
+            <img src="/ITAB_Bednarek_Polen_Retail_Lighting (2).jpg" className='w-full h-[60vh] object-cover' alt="" />
           </div>
         </div>
       </section>

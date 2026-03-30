@@ -13,14 +13,14 @@ function About() {
     <section className='bg-white'>
      <div className="flex flex-col md:grid md:grid-cols-12  " >
       <div className="col-span-6" >
-        <img src="/src/assets/Staff-Metting.jpeg" className='w-full opacity-60' alt="" data-aos='fade-up'/>
+        <img src="/public/Staff-Metting.jpeg" className='w-full opacity-60' alt="" data-aos='fade-up'/>
         <div className="p-5 text-center mt-5  lg:mt-5 ">
           <h2 className='font-bold text-2xl py-3'>Meet Out Experts</h2>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-5" >
-            <img src="/src/assets/Recrutement-Marketing-Manager-scaled.jpg" className=' object-cover rounded w-full h-40' data-aos='fade-up' alt="" />
-            <img src="/src/assets/GettyImages-1313239835-1.webp" className=' object-cover rounded w-full h-40' alt="" data-aos='fade-up' />
-            <img src="/src/assets/Expert1.jfif" className=' object-cover rounded w-full h-40' alt="" data-aos='fade-up' />
-            <img src="/src/assets/pexels-mikebirdy-93652.jpg" className=' object-cover rounded  w-full h-40' alt=""  data-aos='fade-up'/>
+            <img src="/public/Recrutement-Marketing-Manager-scaled.jpg" className=' object-cover rounded w-full h-40' data-aos='fade-up' alt="" />
+            <img src="/public/GettyImages-1313239835-1.webp" className=' object-cover rounded w-full h-40' alt="" data-aos='fade-up' />
+            <img src="/public/Expert1.jfif" className=' object-cover rounded w-full h-40' alt="" data-aos='fade-up' />
+            <img src="/public/pexels-mikebirdy-93652.jpg" className=' object-cover rounded  w-full h-40' alt=""  data-aos='fade-up'/>
           </div>
         </div>
         

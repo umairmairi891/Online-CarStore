@@ -27,11 +27,11 @@ function Header() {
             {isopen && (
                 <div className={`md:hidden flex flex-col w-full  bg-white  top-14 duration-500 `}>
                     <ul className={`text-xl font-[Roboto] space-y-2 px-5 rounded-2xl bg-white`}>
-                        <li><NavLink className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} to='/'>Home</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} to='/services'>Services</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} to='/about'>About</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} to='/contact'>Contact</NavLink></li>
-                        <li><NavLink className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0'} to='/shop'>Shop</NavLink></li>
+                        <li><NavLink className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} onClick={()=>setIsOpen(!isopen)} to='/'>Home</NavLink></li>
+                        <li><NavLink onClick={()=>setIsOpen(!isopen)} className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} to='/services'>Services</NavLink></li>
+                        <li><NavLink onClick={()=>setIsOpen(!isopen)} className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} to='/about'>About</NavLink></li>
+                        <li><NavLink onClick={()=>setIsOpen(!isopen)} className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} to='/contact'>Contact</NavLink></li>
+                        <li><NavLink onClick={()=>setIsOpen(!isopen)} className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0'} to='/shop'>Shop</NavLink></li>
 
                     </ul>
                 </div>
