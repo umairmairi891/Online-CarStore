@@ -38,7 +38,7 @@ function Home() {
           <h2 className=' text-lg md:text-2xl font-bold font-[Itel] text-center'>FEATURED VEHCILES</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-5 mb-10 gap-1 md:gap-8">
             {feature.map((val) => (
-              <div key={val.title}  className="py-1 md:py-6 scale-100 hover:scale-110 hover:duration-400">
+              <div key={val.title}  className="py-1 md:py-6 scale-100 shadow-xl rounded-xl hover:scale-110 hover:duration-400">
                 <img loading='lazy' src={val.img} alt={val.title} className='rounded w-90' />
                 <h2 className='font-bold text-lg mt-3 font-[Roboto] px-5'>{val.title}</h2>
               </div>
@@ -51,13 +51,13 @@ function Home() {
         <div className="p-5 px-5 md:px-30">
           <div className="flex flex-col-reverse md:flex-row justify-center gap-10 ">
             <div className="">
-              <img src='/bugatti-w16-mistral-3840x2160-25227.jpg' alt="" className='w-full h-100 opacity-70' />
+              <img src='/bugatti-w16-mistral-3840x2160-25227.jpg' alt="" className='w-full h-100 opacity-70 rounded' />
             </div>
             <div className="">
               <h2 className='text-3xl font-black font-serif py-3 border-b-2'>Our Approach</h2>
-              <p className="max-w-100 sm:max-w-200 md:max-w-200 lg:max-w-100 text-xl py-3 font-[Itel]">At <span>LUXE AUTO SYNDICATE</span>, we don’t just move metal; we curate automotive masterpieces. Our approach is built on the philosophy that buying a supercar should be as exhilarating as driving one.
+              <p className="max-w-100 sm:max-w-200 md:max-w-200 lg:max-w-100 text-xl py-3 font-[Itel]">At <span className='font-semibold'>LUXE AUTO SYNDICATE</span>, we don’t just move metal; we curate automotive masterpieces. Our approach is built on the philosophy that buying a supercar should be as exhilarating as driving one.
               Curated Excellence: We hand-pick every vehicle in our inventory, ensuring they meet rigorous standards of performance, provenance, and aesthetic perfection.</p>
-              <button className='bg-black px-2 py-2 font-[Roboto] text-white mt-5 rounded cursor-pointer hover:bg-gray-900'>Learn More...</button>
+              <button className='bg-black px-2 py-2 text-lg font-[Roboto] text-white mt-5 rounded cursor-pointer  hover:bg-gray-500'>Learn More...</button>
             </div>
           </div>
         </div>

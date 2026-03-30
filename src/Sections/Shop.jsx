@@ -1,8 +1,20 @@
-import { Plus, Search, X } from 'lucide-react'
-import React, { useState } from 'react'
+import { Plus, Search, Trash, X } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
 import { products } from '../Products'
+const localstorageKey='carstore'
 function Shop() {
-  const [product, setProduct] = useState(products)
+  const [product, setProduct] = useState(()=>{
+    const saveCar=localStorage.getItem(localstorageKey)
+    if(saveCar){
+      return JSON.parse(saveCar)
+    }
+    
+      return products
+    
+  })
+  useEffect(()=>{
+    localStorage.setItem(localstorageKey, JSON.stringify(product))
+  },[product])
   const [isopen, setIsOpen] = useState(false)
   const [form, setForm] = useState({
     name: '',
@@ -11,9 +23,7 @@ function Shop() {
     img: ''
   })
   const models=['All', 'Bhugatti', 'Lamborghni','Frari']
-  const addProduct=(newProduct)=>{
-    setProduct(prev=>[newProduct,...prev])
-  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     const newProduct = {
@@ -23,14 +33,18 @@ function Shop() {
       price: form.price,
       img: form.img
     }
+     setProduct(prev=>[newProduct,...prev])
 
-    addProduct(newProduct)
     setIsOpen(false) 
     setForm({ name: '', model: '', price: '', img: '' }) 
   }
 
+  const deleteCar=(id)=>{
+    setProduct(prev=>prev.filter((car)=>car.id!==id))
+  }
+
   return (
-    <section className='bg-white py-4 h-[70vh]'>
+    <section className='bg-white py-4 h-auto'>
       <div className="">
         <div className="flex flex-col md:flex-row justify-around space-y-5 md:space-y-0 items-center mt-5">
           <div className="flex justify-around ">
@@ -49,11 +63,14 @@ function Shop() {
             </ul>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 mt-10 mb-10 px-10 ">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-4 mt-10 mb-10 px-10 ">
           {product.map((car) => (
             <div key={car.id} className="shadow-xl rounded-xl p-5 max-w-100">
               <img src={car.img} alt="" className='w-full' />
+              <div className="flex w-full justify-between items-center">
               <h2 className='text-3xl font-bold  mt-2 font-[Roboto]'>{car.name}</h2>
+              <button className='w-5 h-5 cursor-pointer ' onClick={()=>deleteCar(car.id)}><Trash className='text-black'/></button>
+              </div>
               <h2 className='text-xl font-semibold mt-2 font-serif'>Model:  {car.model}</h2>
               <h2 className='text:lg mt-2 font-semibold font-[Itel]'>Price : $ {car.price} M</h2>
             </div>
@@ -63,7 +80,7 @@ function Shop() {
           <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-110">
             <div className="bg-white flex flex-col shadow-2xl p-5 rounded-2xl w-96">
               <div className="flex justify-between items-center">
-                <h2 className='text-2xl font-bold'>Add New Car</h2>
+                <h2 className='text-2xl font-bold font-[Roboto]'>Add New Car</h2>
                 <X className='cursor-pointer' onClick={() => setIsOpen(false)} />
               </div>
               <form onSubmit={handleSubmit} className='flex flex-col'>
