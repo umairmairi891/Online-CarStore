@@ -23,9 +23,10 @@ function Shop() {
       price: form.price,
       img: form.img
     }
-    console.log(products);
+
     addProduct(newProduct)
-    console.log(product);
+    setIsOpen(false) 
+    setForm({ name: '', model: '', price: '', img: '' }) 
   }
 
   return (
@@ -49,28 +50,28 @@ function Shop() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 mt-10 mb-10 px-10 ">
-          {products.map((car) => (
-            <div className="shadow-2xl rounded-xl p-5 max-w-100">
+          {product.map((car) => (
+            <div key={car.id} className="shadow-xl rounded-xl p-5 max-w-100">
               <img src={car.img} alt="" className='w-full' />
               <h2 className='text-3xl font-bold  mt-2 font-[Roboto]'>{car.name}</h2>
               <h2 className='text-xl font-semibold mt-2 font-serif'>Model:  {car.model}</h2>
-              <h2 className='text:lg mt-2 font-semibold font-[Itel]'>Price : $ {car.price}</h2>
+              <h2 className='text:lg mt-2 font-semibold font-[Itel]'>Price : $ {car.price} M</h2>
             </div>
           ))}
         </div>
         {isopen && (
-          <div className="flex bg-white justify-center z-110 absolute top-20 md:top-40 left-0 md:left-120">
-            <div className="flex flex-col shadow-2xl p-5 rounded-2xl">
-              <div className="flex justify-around items-center">
-                <h2 className='text-center text-2xl font-[Lato]'>Add New Car</h2>
-                <X className='cursor-pointer' onClick={() => setIsOpen(!isopen)} />
+          <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-110">
+            <div className="bg-white flex flex-col shadow-2xl p-5 rounded-2xl w-96">
+              <div className="flex justify-between items-center">
+                <h2 className='text-2xl font-bold'>Add New Car</h2>
+                <X className='cursor-pointer' onClick={() => setIsOpen(false)} />
               </div>
-              <form action="" onSubmit={handleSubmit} className='flex flex-col'>
-                <input className='border-2 border-gray-600 px-3 py-1 mt-5 rounded-xl' type="text" placeholder='Enter Car Name' value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
-                <input className='border-2 border-gray-600 px-3 py-1 mt-8 rounded-xl' type="text" placeholder='Enter Car Model' value={form.model} onChange={(e) => setForm({ ...form, model: e.target.value })} />
-                <input className='border-2 border-gray-600 px-3 py-1 mt-8 rounded-xl' type="text" placeholder='Enter Car Price' value={form.price} onChange={(e) => setForm({ ...form, price: e.target.value })} />
-                <input className='border-2 border-gray-600 px-3 py-1 mt-8 rounded-xl' type="file" placeholder='Enter Car Image' value={form.img} onChange={(e) => setForm({ ...form, img: e.target.value })} />
-                <button type='submit' className='bg-black text-white mt-5 py-1 rounded-xl cursor-pointer hover:bg-gray-700 font-[Itel] text-lg'>Submit</button>
+              <form onSubmit={handleSubmit} className='flex flex-col'>
+                <input required className='border-2 border-gray-600 px-3 py-1 mt-5 rounded-xl' type="text" placeholder='Car Name' value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+                <input required className='border-2 border-gray-600 px-3 py-1 mt-4 rounded-xl' type="text" placeholder='Car Model' value={form.model} onChange={(e) => setForm({ ...form, model: e.target.value })} />
+                <input required className='border-2 border-gray-600 px-3 py-1 mt-4 rounded-xl' type="number" placeholder='Price' value={form.price} onChange={(e) => setForm({ ...form, price: e.target.value })} />
+                <input required className='border-2 border-gray-600 px-3 py-1 mt-4 rounded-xl' type="text" placeholder='Image URL' value={form.img} onChange={(e) => setForm({ ...form, img: e.target.value })} />
+                <button type='submit' className='bg-black text-white mt-5 py-2 rounded-xl hover:bg-gray-700 transition-colors'>Submit</button>
               </form>
             </div>
           </div>

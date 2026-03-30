@@ -55,7 +55,8 @@ function Home() {
             </div>
             <div className="">
               <h2 className='text-3xl font-black font-serif py-3 border-b-2'>Our Approach</h2>
-              <p className="max-w-100 sm:max-w-200 md:max-w-200 lg:max-w-100 text-xl py-3 font-[Itel]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, tempora nulla laboriosam eius rem inventore? Beatae quibusdam, excepturi, sint rem doloribus iusto, praesentium delectus debitis magnam molestiae tempore aperiam omnis placeat iure exercitationem voluptate fugiat itaque perferendis quos mollitia ex.</p>
+              <p className="max-w-100 sm:max-w-200 md:max-w-200 lg:max-w-100 text-xl py-3 font-[Itel]">At <span>LUXE AUTO SYNDICATE</span>, we don’t just move metal; we curate automotive masterpieces. Our approach is built on the philosophy that buying a supercar should be as exhilarating as driving one.
+              Curated Excellence: We hand-pick every vehicle in our inventory, ensuring they meet rigorous standards of performance, provenance, and aesthetic perfection.</p>
               <button className='bg-black px-2 py-2 font-[Roboto] text-white mt-5 rounded cursor-pointer hover:bg-gray-900'>Learn More...</button>
             </div>
           </div>
