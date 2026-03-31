@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { ArrowRight } from 'lucide-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
-
+import {Link} from 'react-router-dom'
 function Home() {
   useEffect(() => {
     AOS.init({
@@ -31,7 +31,10 @@ function Home() {
           <img src="/pexels-milan-masnikosa-3898301-5802053.jpg" alt='Hero Image' className='w-full h-full object-cover opacity-50 ' />
         </div>
         <h3 className='text-white relative font-[Itel] top-15 md:top-20 leading-10 left-15 md:left-40 max-w-2 text-start text-xl md:text-2xl font-bold'>EXPERIENCE AUTOMATIVE EXCELLENCE</h3>
+        <Link to='/shop'>
+        
         <button className='bg-white relative cursor-pointer top-18 md:top-25 left-15 md:left-40 flex justify-around px-1 md:px-4 py-2 rounded font-bold font-serif hover:bg-black hover:text-white hover:duration-200'>Shop Now <span className='ml-1 md:ml-4'><ArrowRight className='w-6 h-6' /></span></button>
+        </Link>
       </section>
       <section className='bg-white w-full  ' data-aos='fade-up'>
         <div className="p-5 flex flex-col items-center " >
@@ -51,13 +54,15 @@ function Home() {
         <div className="p-5 px-5 md:px-30">
           <div className="flex flex-col-reverse md:flex-row justify-center gap-10 ">
             <div className="">
-              <img src='/bugatti-w16-mistral-3840x2160-25227.jpg' alt="" className='w-full h-100 opacity-70 rounded' />
+              <img src='/bugatti-w16-mistral-3840x2160-25227.jpg' alt="" className='w-full h-full sm:h-100 opacity-70 rounded' />
             </div>
             <div className="">
               <h2 className='text-3xl font-black font-serif py-3 border-b-2'>Our Approach</h2>
-              <p className="max-w-100 sm:max-w-200 md:max-w-200 lg:max-w-100 text-xl py-3 font-[Itel]">At <span className='font-semibold'>LUXE AUTO SYNDICATE</span>, we don’t just move metal; we curate automotive masterpieces. Our approach is built on the philosophy that buying a supercar should be as exhilarating as driving one.
+              <p className="max-w-100 sm:max-w-200 md:max-w-200 lg:max-w-100 text-xl py-3 ">At <span className='font-semibold'>LUXE AUTO SYNDICATE</span>, we don’t just move metal; we curate automotive masterpieces. Our approach is built on the philosophy that buying a supercar should be as exhilarating as driving one.
               Curated Excellence: We hand-pick every vehicle in our inventory, ensuring they meet rigorous standards of performance, provenance, and aesthetic perfection.</p>
+              <Link to='/about'>
               <button className='bg-black px-2 py-2 text-lg font-[Roboto] text-white mt-5 rounded cursor-pointer  hover:bg-gray-500'>Learn More...</button>
+              </Link>
             </div>
           </div>
         </div>

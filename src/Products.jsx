@@ -4,6 +4,6 @@
         name:'Bugatti',
         model:'Bugatti',
         price:'1',
-        img:'/public/bugatti-w16-mistral-3840x2160-25227.jpg'
+        img:'/bugatti-w16-mistral-3840x2160-25227.jpg'
     }
 ]

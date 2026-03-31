@@ -48,7 +48,7 @@ function Shop() {
       <div className="">
         <div className="flex flex-col md:flex-row justify-around space-y-5 md:space-y-0 items-center mt-5">
           <div className="flex justify-around ">
-            <button onClick={() => setIsOpen(!isopen)} className='flex justify-between items-center w-40 font-[Itel] bg-black text-emerald-50 px-4 py-1 rounded cursor-pointer text-lg '>Add New Car <span><Plus /></span></button>
+            <button onClick={() => setIsOpen(!isopen)} className='flex justify-between items-center w-40 font-[Itel] bg-black text-emerald-50 px-4 py-1 rounded cursor-pointer text-sm md:text-lg '>Add New Car <span><Plus /></span></button>
           </div>
           <div className="">
             <input type="text" className='border px-4 rounded-xl py-2' name="" id="" placeholder='Search' />
