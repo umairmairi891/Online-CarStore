@@ -15,7 +15,7 @@ function Services() {
         <div className="">
           <h3 className='font-bold font-serif text-3xl'>SERVICES</h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5 py-5 px-5 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5 py-5 px-5 md:px-0 z-100">
            <div className="p-10  border-2 flex flex-col rounded justify-center items-center max-w-100" data-aos='fade-up'>
             <Car className='text-black w-10 h-10'/>
             <h2 className='mt-2 font-bold text-center  text-lg'>VEHICLES SALES & ACQUISITIONS </h2>

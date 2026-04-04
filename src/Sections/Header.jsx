@@ -26,7 +26,7 @@ function Header() {
                 </div>
             </nav>
             {isopen && (
-                <div className='md:hidden flex flex-col w-full animate__animated  animate__fadeInRight bg-white  top-14 duration-500  z-110'>
+                <div className='md:hidden flex flex-col fixed w-full animate__animated  animate__fadeInRight bg-white  top-14 duration-500  z-110'>
                     <ul className={`text-xl font-[Roboto] space-y-2 px-5 rounded-2xl bg-white`}>
                         <li><NavLink className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} onClick={()=>setIsOpen(!isopen)} to='/'>Home</NavLink></li>
                         <li><NavLink onClick={()=>setIsOpen(!isopen)} className={({ isActive }) => isActive ? 'border-b py-2 duration-400' : 'border-0 '} to='/services'>Services</NavLink></li>

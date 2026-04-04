@@ -63,7 +63,7 @@ function Shop() {
             </ul>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-4 mt-10 mb-10 px-10 ">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 md:grid-cols-3 mt-10 mb-10 px-10 ">
           {product.map((car) => (
             <div key={car.id} className="shadow-xl rounded-xl p-5 max-w-100">
               <img src={car.img} alt="" className='w-full' />

@@ -1,5 +1,6 @@
 import { Facebook, Linkedin, Twitter } from 'lucide-react'
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Footer() {
   return (
@@ -13,27 +14,37 @@ function Footer() {
           <div className="flex flex-col md:grid md:grid-cols-3  md:gap-5 space-x-5 ">
             <div className="">
               <ul className='font-[Lato] text-xl '>
+                <Link to='/'>
                 <li>Home</li>
+                </Link>
+                <Link to='/services'>
                 <li>Services</li>
+                </Link>
               </ul>
             </div>
             <div className="">
               <ul className='font-[Lato] text-xl '>
-                <li>Privacy</li>
+                <Link to='/shop'>
+                <li>Shop</li>
+                </Link>
+                <Link to='/about'>
                 <li>About</li>
+                </Link>
               </ul>
             </div>
             <div className="">
               <ul className='font-[Lato] text-xl'>
-                <li>Commercial</li>
+                <Link to='/contact'>
+                <li>Contact</li>
+                </Link>
                 <li>focus</li>
               </ul>
             </div>
           </div>
           <div className="flex  space-x-5 px-10">
-            <Facebook className='bg-white text-black w-8 h-6 rounded' />
-            <Twitter className='bg-white text-black w-8 h-6 rounded' />
-            <Linkedin className='bg-white text-black w-8 h-6 rounded' />
+            <Facebook className='bg-white text-black w-8 h-8 p-1 rounded-xl' />
+            <Twitter className='bg-white text-black w-8 h-8 p-1 rounded-xl' />
+            <Linkedin className='bg-white text-black w-8 h-8 p-1 rounded-xl' />
           </div>
         </div>
 
